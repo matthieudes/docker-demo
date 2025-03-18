@@ -1,0 +1,7 @@
+services:
+  # On ajoute des volumes pour une base de test
+  web:
+    volumes:
+      - ./src:/var/www/oro 
+      - ./logs/nginx:/var/log/nginx 
+

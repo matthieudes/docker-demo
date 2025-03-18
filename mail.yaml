@@ -1,0 +1,9 @@
+services :
+    mail:
+      image: mailhog/mailhog
+      hostname: mail
+      environment:
+        MH_UI_WEB_PATH: mailcatcher
+        MH_STORAGE: maildir
+        MH_MAILDIR_PATH: /home/mailhog/maildir
+      restart: unless-stopped

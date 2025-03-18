@@ -1,0 +1,9 @@
+services :
+  init:
+    image: ${ORO_IMAGE}:$ORO_IMAGE_TAG
+    command: init
+    env_file: .env
+    volumes:
+      - etc_nginx:/etc/nginx
+      - run_php_fpm:/run/php-fpm
+      - public:/var/www/oro/public
