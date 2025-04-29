@@ -16,12 +16,11 @@ services:
       "ws":
         condition: service_started
     networks:
-      default:
-        aliases:
-          - ${ORO_APP_DOMAIN}
+      - front-end
     volumes:
       - cache:/var/www/oro/var/cache:ro
       - public:/var/www/oro/public
       - public_storage:/var/www/oro/public/media:ro
       - private_storage:/var/www/oro/var/data:ro
       - etc_nginx:/etc/nginx
+    

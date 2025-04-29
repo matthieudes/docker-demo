@@ -42,6 +42,8 @@ services:
         condition: service_completed_successfully    
     volumes:
       - run_php_fpm:/run/php-fpm
+    networks:
+      - back-end
 
   cron:
     <<: *common-config
@@ -76,3 +78,10 @@ volumes:
   etc_nginx: {}
   run_php_fpm: {}
   public: {}
+
+
+networks:
+  front-end:
+    driver: bridge
+  back-end:
+    driver: bridge

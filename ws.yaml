@@ -15,3 +15,5 @@ services:
       - public:/var/www/oro/public
       - public_storage:/var/www/oro/public/media
       - private_storage:/var/www/oro/var/data
+    networks:
+      - front-end
