@@ -16,7 +16,7 @@ services:
       "ws":
         condition: service_started
     networks:
-      - front-end
+      - front
     volumes:
       - cache:/var/www/oro/var/cache:ro
       - public:/var/www/oro/public

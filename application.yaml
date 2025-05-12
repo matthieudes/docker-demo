@@ -10,5 +10,8 @@ services:
         condition: service_started
       "cron":
         condition: service_started
+    networks:
+      - front
+      - back
 
   

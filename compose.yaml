@@ -43,7 +43,8 @@ services:
     volumes:
       - run_php_fpm:/run/php-fpm
     networks:
-      - back-end
+      - back
+      - baseDeDonnees
 
   cron:
     <<: *common-config
@@ -81,7 +82,9 @@ volumes:
 
 
 networks:
-  front-end:
+  front:
     driver: bridge
-  back-end:
+  back:
+    driver: bridge
+  baseDeDonnees:
     driver: bridge
