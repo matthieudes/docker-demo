@@ -45,6 +45,7 @@ services:
     networks:
       - back
       - baseDeDonnees
+      - front
 
   cron:
     <<: *common-config
